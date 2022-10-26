@@ -1,7 +1,16 @@
-# -*- coding: utf-8 -*-
-import os, sys
-sys.path.insert(0, '/var/www/u1813889/data/www/wolf-mag.ru/tg-bot_Test')
-sys.path.insert(1, '/var/www/u1813889/data/djangoenv/lib/python3.8.6/site-packages')
-os.environ['DJANGO_SETTINGS_MODULE'] = 'TgSeller.settings'
+"""
+WSGI config for TgSeller project.
+
+It exposes the WSGI callable as a module-level variable named ``application``.
+
+For more information on this file, see
+https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/
+"""
+
+import os
+
 from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'TgSeller.settings')
+
 application = get_wsgi_application()
